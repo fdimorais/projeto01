@@ -1,3 +1,17 @@
+<?php
+	
+	//definições de variáveis
+	$servidor = '';
+	$usuario  = '';
+	$senha    = '';
+	$banco    = '';
+	
+	// conectando ao mysql
+	$mysqli = new mysqli($servidor, $usuario, $senha, $banco);
+	
+	// teste de conexão
+	if(mysqli_connect_errno()) trigger_error(mysqli_connect_error());
+	?>
 
 <html>
 <head>
@@ -9,6 +23,21 @@
 		<div class="container">
 	<h1>Monitor de Redes</h1>
 
+	
+	<form method="POST" >
+	Nome: <input type="text" name="nome" />
+	IP:   <input type="text" name="ip" />
+	Usuário <input type="text" name="usuario" />
+	
+	<input type="submit" />
+		
+		
+		</form>
+	
+	
+	
+	
+	
 	
 
 	<table border='1' class="table bordered-table">
