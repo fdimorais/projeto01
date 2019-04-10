@@ -1,18 +1,6 @@
-<?php
-	
-	//definições de variáveis
-	$servidor = '';
-	$usuario  = '';
-	$senha    = '';
-	$banco    = '';
-	
-	// conectando ao mysql
-	$mysqli = new mysqli($servidor, $usuario, $senha, $banco);
-	
-	// teste de conexão
-	if(mysqli_connect_errno()) trigger_error(mysqli_connect_error());
+	<?php 
+		include("conexao.php");
 	?>
-
 <html>
 <head>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -24,7 +12,8 @@
 	<h1>Monitor de Redes</h1>
 
 	
-	<form method="POST" >
+	<form method="POST" action="inserir.php" >
+
 	Nome: <input type="text" name="nome" />
 	IP:   <input type="text" name="ip" />
 	Usuário <input type="text" name="usuario" />
