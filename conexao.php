@@ -1,9 +1,9 @@
 <?php
 	
 	//definições de variáveis
-	$servidor = 'localhost:3307';
+	$servidor = 'localhost';
 	$usuario  = 'root';
-	$senha    = 'p@ssw0rd';
+	$senha    = 'faccon';
 	$banco    = 'monitorderedes';
 	
 	// conectando ao mysql
